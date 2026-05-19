@@ -33,9 +33,9 @@ def run_benchmark():
                     if label == "POSITIVE":
                         positive_count += 1
                         
-                    print(f"Tested: '{text[:40]}...' -> {label} ({score:.2f})")
+                    print(f"Tested: '{text[:60]}...' -> {label} ({score:.2f})")
                 else:
-                    print(f"Error evaluating: '{text[:40]}...' - Status Code: {response.status_code}")
+                    print(f"Error evaluating: '{text[:60]}...' - Status Code: {response.status_code}")
 
     except FileNotFoundError:
         print(f"Error: Could not find {DATA_FILE}. Make sure it is in the same folder.")
